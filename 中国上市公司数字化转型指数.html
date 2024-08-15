@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国上市公司数字化转型指数</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: '宋体', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        h1, p {
+            margin: 10px;
+        }
+        .citation {
+            font-style: italic;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 800px; /* 限制最大宽度以提高可读性 */
+            margin: 20px auto; /* 居中显示并添加与上方文字的间距 */
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+            border-radius: 8px; /* 圆角效果 */
+            transition: all 0.3s;
+        }
+        iframe {
+            width: 100%;
+            height: 600px; /* 设定更大的默认高度 */
+            border: none;
+            border-radius: 8px; /* 圆角效果 */
+        }
+        .content-container {
+            padding-top: calc(20 * 1em); /* 20行高度的填充 */
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .form-container {
+                padding: 5px;
+            }
+            iframe {
+                height: 400px; /* 在小屏幕上减少高度 */
+            }
+            .content-container {
+                padding-top: calc(20 * 1.5em); /* 根据小屏幕的行高调整填充 */
+            }
+        }
+    </style>
+    <script>
+        function expandForm() {
+            var container = document.querySelector('.form-container');
+            container.classList.toggle('expanded');
+            var iframe = container.querySelector('iframe');
+            if (container.classList.contains('expanded')) {
+                iframe.style.height = '800px'; /* 扩展时增加高度 */
+            } else {
+                iframe.style.height = '600px'; /* 收缩时恢复默认高度 */
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content-container">
+        <h1>中国上市公司数字化转型指数（2006-2023年版）</h1>
+        <p>数据构建过程请见我们的公开论文：《企业数字化转型的测度难题：基于大语言模型的新方法与新发现》</p>
+        <p>如果您使用这些数据，请务必引用以下文献：</p>
+        <a href="https://kns.cnki.net/kcms2/article/abstract?v=qwZretP9BaFPcgbIXJojBbTI6KqXYIzw-5qrI3MfttYIo86ubbivBIpT8YV5p3vY8WmbweYV1QnGcmxHweP7qnZ_K3SdM2TqyTE1I9R25YJyHyPxlDMNhGaEhl9s_VLKsSnG9VW95bOe29x5ZSuA1Q==&uniplatform=NZKPT&language=CHS">金星晔、左从江、方明月、李涛、聂辉华，2024：《企业数字化转型的测度难题：基于大语言模型的新方法与新发现》，《经济研究》第3期</a>
+        <p>填写表单，我们会尽快审核并通过邮件发送数据：</p>
+    </div>
+    <div class="form-container" onclick="expandForm()">
+        <iframe src="https://f.wps.cn/ksform/w/write/jwIo93jm#routePromt"></iframe>
+    </div>
+</body>
+</html>
